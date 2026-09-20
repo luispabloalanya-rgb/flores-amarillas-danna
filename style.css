@@ -426,7 +426,7 @@ html,body{
 .music-toggle.playing{animation:seedPulse 2.4s ease-in-out infinite;}
 
 /* ============ MAIN ============ */
-#main{z-index:1;opacity:0;visibility:hidden;overflow:hidden;}
+#main{z-index:1;opacity:0;visibility:hidden;overflow-x:hidden;overflow-y:auto;}
 #main.visible{opacity:1;visibility:visible;}
 
 .sky-layer{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;}
@@ -591,10 +591,10 @@ footer{
   .field{height:16vh;}
   .falling-flowers{opacity:.72;}
   .side-flower{transform:scale(.72);}
-  .jar-stage{width:min(310px,94vw);height:min(335px,57vh);}
+  .jar-stage{width:min(310px,88vw);height:min(335px,57vh);}
   .jar-label{font-size:.75rem;}
   .flower-help{max-width:90vw;line-height:1.35;}
-  .envelope-stage{width:min(320px,92vw);height:min(210px,48vw);}
+  .envelope-stage{width:min(320px,88vw);height:min(210px,48vw);}
   #letterScreen p.sub{margin-bottom:18px;}
 }
 
@@ -606,7 +606,7 @@ footer{
   .envelope-stage{height:170px;}
   .open-hint{margin-top:10px;}
   .content-wrap{gap:4px;padding-top:4px;}
-  .illustration{width:min(220px,64vw);}
+  .illustration{width:min(220px,62vw);}
   .card{padding:28px 16px 22px;border-radius:20px;}
   .card .name{font-size:2.1rem;margin-bottom:12px;}
   .card .message,.card .love-message,.card .phrase{font-size:.82rem;}
@@ -621,4 +621,13 @@ footer{
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
+}
+
+@media (max-width:340px){
+  .screen{padding-left:8px;padding-right:8px;}
+  .jar-stage{width:86vw;height:255px;}
+  .jar-svg{max-width:100%;}
+  .envelope-stage{width:86vw;height:154px;}
+  .flower-help{font-size:.66rem;}
+  .music-toggle{right:10px;width:40px;height:40px;font-size:17px;}
 }
